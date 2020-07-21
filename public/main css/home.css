@@ -1,0 +1,40 @@
+.top-wrapper {
+    /* height: 500px; */
+    padding-top: 180px;
+    padding-bottom: 200px;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Ffot&psig=AOvVaw0FRddy82sHH67hP6fynoH8&ust=1595142225002000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKj7xI6e1uoCFQAAAAAdAAAAABAJ');
+    /* background-color: rgb(161, 190, 190); */
+    background-size: cover;
+}
+
+span{
+    color: rgb(133, 133, 235);
+}
+.footer {
+    background-color: rgb(6, 6, 22);
+}
+
+.copy-right {
+    color: lightgrey;
+    text-align: left;
+}
+
+main{
+    margin: 50px 300px;
+}
+
+.home-img-content {
+    /* font-size: 500px;
+    font-family: "penna"; */
+    text-align: right;
+    padding-top: 70px;
+}
+
+.covid1 {
+    font-size: 100px;
+    font-family: "penna";
+}
+
+#footer_home {
+    height: 10%px;
+}

@@ -16,15 +16,33 @@ html(lang="en")
                         th Last name
                         th User name
                         th Email
-                        th Password
                         th Date of Birth
                         th Gender
                         th NIN 
-                        th Employee ID
                         th PhoneNumber
-                    tbody
+                        th
+                        
+                tbody
+
+                    each agent in agents
+
+                        tr
+                            td #{agent.fname}
+                            td #{agent.lname}
+                            td #{agent.username}
+                            td #{agent.email}
+                            td #{agent.birthday}
+                            td #{agent.gender}
+                            td #{agent.nationalid}
+                            td #{agent.phoneNumber}
+                            td 
+                            
+                                form(method="post" action='/register/delete')
+                                    input(type="hidden", placeholder="", name="id", value=agent._id)
+                                    button.btn.btn-dark.btn-block(type="submit") Delete 
+
                 
     button.btn.btn-primary#add
         a(href="/register", style="color: white") Add New Sales Agents
     br
-    footer(#footer,style="color: black;") Copyright © 2020 All rights reserved by Walter.
+    footer(#footer,style="color: white; background-color: rgb(6,6,22); text-align: center;" class="fixed-bottom") Copyright © 2020 All rights reserved by Walter.

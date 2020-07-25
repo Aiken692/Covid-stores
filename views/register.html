@@ -45,15 +45,15 @@
             
             <div class="reg-content">
                 <div class="reg-img">
-                    <img src="img/reg-img.jpg" alt="">
+                    <img src="img/woman.jpg" alt="">
                     <div class="reg-img-content">
                         <h2>Registration Form For Sales Agents.</h2>
-                        <h1>@ Covid Stores !</h1>
+                        <h1>@ Covid <span style="color: cyan;">Stores</span> !</h1>
                     </div>
                 </div>
                 <div class="reg-form">
                    
-                    <form action="#" method="POST" class="register-form" id="register-form">
+                    <form action="/register" method="POST" class="register-form" id="register-form">
                         <div class="form-row">
 
                           
@@ -64,23 +64,28 @@
                                 
                                     <div class="form-input">
                                         <label for="first-name" class="required" aria-placeholder="First name">First name</label><br>
-                                        <input type="text" name="first-name" id="first-name">
+                                        <input type="text" name="fname" id="fname">
+                                        <small>Error message</small>
                                     </div>
                                     <div class="form-input">
                                         <label for="last-name" class="required">Last name</label><br>
-                                        <input type="text" name="last-name" id="last-name">
+                                        <input type="text" name="lname" id="lname">
+                                        <small>Error message</small>
                                     </div>
                                     <div class="form-input">
                                         <label for="username" class="required">User name</label><br>
                                         <input type="text" name="username" id="username" />
+                                        <small>Error message</small>
                                     </div>
                                     <div class="form-input">
                                         <label for="email" class="required">Email</label><br>
                                         <input type="text" name="email" id="email">
+                                        <small>Error message</small>
                                     </div>
                                     <div class="form-input">
                                         <label for="password" class="required">Password</label><br>
                                         <input type="text" name="password" id="password">
+                                        <small>Error message</small>
                                     </div>
                                     
                                 
@@ -100,14 +105,14 @@
                                     <div class="form-radio">
                                         <label for="gender" class="radio-label">Gender:</label>
                                         <div class="form-radio-item">
-                                            <input type="radio" name="gender" id="male">
+                                            <input type="radio" name="gender" style="margin: 5px;" id="male" value="male">
                                             <label for="male">Male</label>
                                             <span class="check"></span>
 
-                                            <input type="radio" name="gender" id="female">
+                                            <input type="radio" name="gender" style="margin: 5px;" id="female" value="value">
                                             <label for="female">Female</label>
                                             <span class="check"></span>
-                                            
+                                           
                                         </div>
                                         <!-- <div class="form-radio-item">
                                             <input type="radio" name="gender" id="female">
@@ -125,7 +130,7 @@
                                     </div>
                                     <div class="form-input">
                                         <label for="phone-number" class="required">PhoneNumber</label><br>
-                                        <input type="text" name="phone-number" id="phone-number">
+                                        <input type="text" name="phoneNumber" id="phone-number">
                                     </div>
                                 
 
@@ -139,15 +144,15 @@
 
                         <div class="register">
                             <button class="register1" style="color: white;">
-                                Register
+                                Submit
                             </button>
                         </div>
                         <br>
-                        <div class="register">
+                        <!-- <div class="register">
                             <button type="button" class="btn btn-danger">
                                 Cancel
                             </button> 
-                        </div>
+                        </div> -->
 
 
 
@@ -176,4 +181,9 @@
  <footer class="fixed-bottom" id="footer" style="color: white; background-color: rgb(6, 6, 22); text-align: center;">Copyright © 2020 All rights reserved by Walter.</footer>
  <!-- End of footer -->
 </body>
+
+<script src="js/validate.js"></script>
+
+
+
 </html>

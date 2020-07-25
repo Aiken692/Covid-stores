@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(73, 70, 70);
+    height: 700px;
+    
+}
+
+fieldset {
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 10%;
+    /* margin: 79%; */
+
+}
+
+h3 {
+    font-family: "penna";
+    color: rgb(16, 8, 46);
+}
+
+
+
+h1 {
+    font-family: 'penna';
+    color:black;
+    text-align: center;
+    bottom: 50%;
+}
+span {
+    color: rgb(133, 133, 235);
+}
+label {
+    color: rgb(6, 6, 22);
+    
+}
+
+footer{
+    text-align: center;
+}
+
+input {
+    border-radius: 5px;
+}
+
+.butn {
+    background-color: purple;
+    color: white;
+    width: 50%;
+    border-radius: 25px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}

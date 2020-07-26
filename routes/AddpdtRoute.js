@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
     try {
         await product.save()
         //console.log(req.body)
-        res.redirect('/Addpdt/Addpdt/product')
+        res.redirect('/Addpdt/product')
         
     } catch (err) {
         res.send('Sorry! Something went wrong');

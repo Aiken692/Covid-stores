@@ -16,8 +16,9 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="login">Login</a>
           </li>
@@ -25,13 +26,15 @@
             <a class="nav-link" href="#">Pricing</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Our Products
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#furniture">Furniture</a>
+              <a class="dropdown-item" href="#food">Food Stuff</a>
+              <a class="dropdown-item" href="#fittness">Fittness Kits</a>
+              <a class="dropdown-item" href="#tv">Television Sets</a>
+              <a class="dropdown-item" href="#gaming">Gaming</a>
             </div>
           </li>
         </ul>
@@ -56,6 +59,7 @@
                 <div class="home-img-content">
                   <h1 class="covid1">Covid<span>store</span></h1>
                   <h2>Here For You !</h2>
+                  <h5 style="color: rgb(133, 133, 235);">Wash you hands and stay safe.</h5>
             
                 </div>
               </div>
@@ -68,14 +72,16 @@
 
 
     <!-- Display Products -->
-    <div>
-      <h3 style="text-align: center;">Our products</h3>
+    <div class="ourproducts">
+      <h3>Our products</h3>
+      
+      
     </div>
     
 
-    <!-- bootstrap -->
+    <!-- starting point of products -->
     <div class="card-header">
-      <h4>Furniture</h4>
+      <h4 id="furniture">Furniture</h4>
     </div>
     <div class="row row-cols-1 row-cols-md-2">
       
@@ -83,7 +89,7 @@
         <div class="card">
           <img src="img/davis.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Shs 3,000,000</h5>
             
           </div>
         </div>
@@ -92,14 +98,14 @@
         <div class="card">
           <img src="img/Desk.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Shs 500,000</h5>
             
           </div>
         </div>
       </div>
       <div class="col-md-3 mb-4">
         <div class="card">
-          <img src="img/shutter.webp" class="card-img-top" alt="...">
+          <img src="img/shutter.webp" class="card-img-top" alt="..." style="height: 230px;">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             
@@ -118,100 +124,152 @@
     </div>
 
 
+    <h1 id="food">Food Stuff</h1>
 
-
-
-
-
-
-
-
-
-    <!-- My cards  -->
-    <div class="product-list">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/MUSIC.jpg" alt="">
-              <h5>$500</h5>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/MUSIC.jpg" alt="">
-              <h5>$500</h5>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/MUSIC.jpg" alt="">
-              <h5>$500</h5>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/MUSIC.jpg" alt="">
-              <h5>$500</h5>
-            </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col-md-4 mb-4" style="padding: 0 5%;">
+        <div class="card">
+          <img src="img/food1.jpg" class="card-img-top" alt="..." style="height: 236px;">
+          <div class="card-body">
+            <h5 class="card-title">Vegetables</h5>
+            
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/MUSIC.jpg" alt="">
-              <h5>$500</h5>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/MUSIC.jpg" alt="">
-              <h5>$500</h5>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/MUSIC.jpg" alt="">
-              <h5>$500</h5>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/MUSIC.jpg" alt="">
-              <h5>$500</h5>
-            </div>
+      </div>
+      <div class="col-md-4 mb-4" style="padding: 0 5%;">
+        <div class="card">
+          <img src="img/food2.jpg" class="card-img-top" alt="..." style="height: 236px;">
+          <div class="card-body">
+            <h5 class="card-title">Fruits</h5>
+            
           </div>
         </div>
+      </div>
+      <div class="col-md-4 mb-4" style="padding: 0 5%;">
+        <div class="card">
+          <img src="img/beef.jpg" class="card-img-top" alt="..." style="height: 236px;">
+          <div class="card-body">
+            <h5 class="card-title">Beef</h5>
+            
+          </div>
+        </div>
+      </div>
+     
+    </div>
 
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/wood.jpg" alt="">
-              <h5>$500</h5>
-            </div>
+    <h3 id="fittness">Fittness Kits</h3>
+
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col-md-6 mb-4" style="padding: 0 5%;">
+        <div class="card">
+          <img src="img/gym1.jpg" class="card-img-top" alt="..." style="height: 236px;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/wood.jpg" alt="">
-              <h5>$500</h5>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4" style="padding: 0 5%;">
+        <div class="card">
+          <img src="img/gym2.jpg" class="card-img-top" alt="..." style="height: 236px;">
+          <div class="card-body">
+            <h5 class="card-title">Dumb bell</h5>
+            
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/wood.jpg" alt="">
-              <h5>$500</h5>
-            </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <div class="card-header" style="background-color: lightgrey;">
+      <h4 id="tv">Television Sets</h4>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col-md-6 mb-4" style="padding: 0 5%;">
+        <div class="card">
+          <img src="img/tv4.webp" class="card-img-top" alt="..." style="height: 236px;">
+          <div class="card-body">
+            <h5 class="card-title">Shs 5,000,000</h5>
+            
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img src="img/wood.jpg" alt="">
-              <h5>$500</h5>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4" style="padding: 0 5%;">
+        <div class="card">
+          <img src="img/tv3.jpg" class="card-img-top" alt="..." style="height: 236px;">
+          <div class="card-body">
+            <h5 class="card-title">Shs #,000,000</h5>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <!-- Gaming  -->
+    <div class="card-header">
+      <h4 id="gaming">Gaming</h4>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="img/game1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Shs 1,400,000</h5>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="img/games.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Shs 200,000</h5>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="img/game3.jpg" class="card-img-top" alt="..." style="height: 230px;">
+          <div class="card-body">
+            <h5 class="card-title">Shs 1,200,000</h5>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="img/game2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Shs 350,000</h5>
+             
           </div>
         </div>
       </div>
     </div>
+    <!-- End of Gaming  -->
+
+
+
+
+
+
+
+    <!-- End of products -->
+
+
+
+
+
+
+
+
+
 
 
 

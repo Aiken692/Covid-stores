@@ -14,7 +14,13 @@ body {
 }
 
 input {
-    border-radius: 10px;
+    width: 100%;
+    /* box-shadow: skyblue; */
+    height: 9%;
+    
+  
+    
+  
 }
 
 #footer {

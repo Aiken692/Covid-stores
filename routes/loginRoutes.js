@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
 
 router.post('/', (req, res) => {
-    // res.sendFile(__dirname, '../views', 'login.html')
+    res.sendFile(__dirname, '../views', 'login.html')
     res.json(req.body)
 })
 

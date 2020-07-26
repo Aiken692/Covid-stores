@@ -23,4 +23,32 @@ html(lang="en")
                         th Number in Stock
                         th Description
                         th Image 
-                    tbody
+                tbody
+
+                    each product in products
+
+
+                        tr
+                            td #{product.productName}
+                            td #{product.make}
+                            td #{product.serialNo}
+                            td #{product.initial_pay}
+                            td #{product.color}
+                            td #{product.description}
+                            td #{product.category}
+                            td #{product.date}
+                            td #{product.price}
+                            td #{product.pay_interval}
+                            td #{product.stockNumber}
+                            td #{product.image}
+                            td
+                            td
+
+                                //- form(method="post" action='/Addpdt/delete')
+                                //-     input(type="hidden", placeholder="", name="id", value=agent._id)
+                                //-     button.btn.btn-dark.btn-block(type="submit") Delete 
+
+    button.btn.btn-primary#add
+        a(href="/Addpdt", style="color: white") Add New Sales Agents
+    br
+    footer(#footer,style="color: white; background-color: rgb(6,6,22); text-align: center;" class="fixed-bottom") Copyright © 2020 All rights reserved by Walter.

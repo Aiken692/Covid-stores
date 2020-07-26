@@ -38,5 +38,12 @@ main{
 #footer_home {
     height: 10%px;
 }
+.ourproducts {
+    text-align: center;
+}
+
+.card-header {
+    background-color: lightgrey;
+}
 
 

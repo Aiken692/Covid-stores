@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer <Form></Form></title>
+    <link rel="stylesheet" href="/main css/bootstrap.min.css">
+    <link rel="stylesheet" href="/main css/cust.css">
+</head>
+<body>
+
+  <!-- Start of the Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">COVID Stores</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/agentlist">Add Sales Agents</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown for more.
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="agentlist">Agents List</a>
+            <a class="dropdown-item" href="#">Add Product</a>
+            <a class="dropdown-item" href="#">Products</a>
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+    <a href="/login/logout"><button action="" style="position: right; width: 100%; border-radius: 5px;">Logout</button></a>
+    
+  </nav>
+  <!-- End of the nav bar -->
+
+  <!-- Main conte -->
+
+  <div class="container">
+    <form action="/customer" method="POST" name="cust" id="customer">
+      <h2>Customer Purchase Details</h2>
+      <div class="form-group">
+          <div class="row">
+              <label for="fullname">Full name</label><br>
+              <input type="text" name="fullname" class="fullname">
+              <div class="error" id="nameErr"></div>
+          </div>
+
+          <div class="row">
+              <label for="location">Location</label><br>
+              <input type="text" name="locaton" class="location">
+              <div class="error" id="locErr"></div>
+          </div>
+
+          <div class="row">
+              <label for="phoneNumber">Phone number</label><br>
+              <input type="number" name="phoneNumber" class="phoneNumber">
+              <div class="error" id="phoneErr"></div>
+          </div>
+
+          <div class="row">
+              <label for="email">Email</label><br>
+              <input type="text" name="email" class="email">
+              <div class="error" id="emailErr"></div>
+          </div>
+          <div class="row">
+              <label for="initialPay">Initial Pay</label><br>
+              <input type="number" name="initialPay" class="initialPay">
+          </div>
+          <div class="row">
+              <label for="nantionalid">National ID</label><br>
+              <input type="text" name="nationalid" class="nationalID">
+              <div class="error" id="ninErr"></div>
+
+          </div>
+
+          <div class="row">
+              <label>Gender</label><br>
+              <div class="form-inline">
+                  <label><input type="radio" name="gender" value="male"> Male</label>
+                  <label><input type="radio" name="gender" value="female"> Female</label> 
+              </div>
+              <div class="error" id="genderErr"></div>
+          </div>
+          
+      </div>
+
+      <div class="form-group">
+          <div class="row">
+              <label for="itemName">Item name</label><br>
+              <input type="text" name="itemName" class="itemName">
+              <div class="error" id="itemErr"></div>
+          </div>
+
+          <div class="row">
+              <label for="serialNumber">Item serial number</label><br>
+              <input type="number" name="serialNumber" class="serialNUmber">
+              <div class="error" id="serialErr"></div>
+          </div>
+          <div class="row">
+              <label for="dateOfPay"> Date of Pay</label><br>
+              <input type="date" name="date" class="date">
+          </div>
+          <div class="row">
+              <label for="nextDateOfPayment">Next date of payment</label><br>
+              <input type="date" name="date" class="date">
+          </div>
+          <div class="row">
+              <label for="amountPayble">Amount next Payable</label><br>
+              <input type="number" name="amountPayable" class="amountPayable">
+          </div>
+          <div class="row">
+              <label for="refereeNumber">Refree number</label><br>
+              <input type="text" name="refereeNumber" class="refereeNumber">
+          </div>
+          <div class="row">
+              <label for="purchaseReceipt">Purchase Receipt</label><br>
+              <input type="text" name="purchaseReceipt" class="purchaseReceipt">
+              
+          </div>
+
+         
+      </div>
+      <br>
+      
+
+      <button class="btn" type="submit">Submit</button>
+
+  </form>
+
+  </div>
+
+  <!-- Footer Area -->
+ <footer class="fixed-bottom" id="footer" style="color: white; background-color: rgb(6, 6, 22); text-align: center;">Copyright © 2020 All rights reserved by Walter.</footer>
+ <!-- End of footer -->
+    
+    <script src="/js/customer.js"></script>
+</body>
+</html>

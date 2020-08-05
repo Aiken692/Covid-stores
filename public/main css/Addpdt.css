@@ -1,6 +1,6 @@
 body {
     background-color: rgb(73, 70, 70);
-    height: 700px;
+    height: 800px;
     
 }
 
@@ -49,3 +49,25 @@ input {
     padding-bottom: 5px;
     margin-bottom: 5px;
 }
+
+#msg {
+    color: red;
+}
+/* .form-control {
+    background-color: whitesmoke;
+} */
+
+/* .form-control small {
+    visibility: hidden;
+}
+
+.form-control.error input {
+    border: 1px solid red;
+}
+.form-control.success input {
+    border: 1px solid green;
+}
+.form-control.error small{
+    visibility: visible;
+    color: red;
+} */

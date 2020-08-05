@@ -1,0 +1,86 @@
+Doctype
+html
+  link(rel="stylesheet" href="/css/bootstrap.css")
+  script(src="/js/jquery-3.4.1.js")
+  script(src="js/bootstrap.js")
+  head
+    title  Customers
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary(style='position: fixed;z-index: 1000; top: 0;width: 100%;')
+     a.navbar-brand(href='/') Covid Stores.
+     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+     #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+       li.nav-item.active
+         a.nav-link(href='/' style='color: #fff;') Home 
+       li.nav-item
+         a.nav-link(href='/login' style='color: #fff;') Admin
+       li.nav-item
+         a.nav-link(href='/saleslist' style='color: #fff;') View Sales Representatives
+       li.nav-item
+         a.nav-link(href='/form2' style='color: #fff;') Logout
+    br
+    br
+    br     
+    h2 List of Registered Customers
+    form.form-group(action='/findcustomerr')
+     div.row
+      div.col-md-6
+       input.form-control(type='text' placeholder='Enetr The Full Name' name='fullName')
+      .col-md-3
+        input.btn.btn-primary(type='submit' value='Search')  
+      .col-md-3
+       button.btn.btn-primary#addcustomer
+         a(href="/customer") Add New Customer  
+    div.container-fluid  
+     table.table
+      thead.thead-dark
+       each customer in customers
+        tr
+          th  1. Full Name
+          td  #{customer.fullName}
+          td
+            button.btn.btn-primary#addcustomer
+             a(href=`/findcustomer/${customer._id}`)  View customer Details
+        tr
+          th   2. Location
+          td  #{customer.location}
+        tr  
+          th   3. Phone Number
+          td  #{customer.phoneNumber}
+        tr   
+          th   4. Email
+          td  #{customer.email}
+        tr  
+          th   5. Initial Pay
+          td  #{customer.initialPay}
+        tr  
+          th  6. NIN
+          td  #{customer.nationalid} 
+        tr  
+          th   7. Gender
+          td  #{customer.gender} 
+        tr  
+          th  8. Item Name
+          td  #{customer.itemName}
+        tr  
+          th   9.Serial Number
+          td  #{customer.serialNumber}
+        tr   
+          th   10. Date of Payment.
+          td  #{customer.date} 
+        tr  
+          th  11. Next Date of Payment.
+          td  #{customer.date}
+        tr  
+          th   12. Amount Payable
+          td  #{customer.amountPayable} 
+        tr  
+          th   13. Referee Number
+          td  #{customer.refereeNumber}
+        tr  
+          th   14. Purchase Receipt.
+          td  #{customer.purchaseReceipt}  
+    footer(#footer,style="color: white; background-color: rgb(6,6,22); text-align: center;" class="fixed-bottom") Copyright © 2020 All rights reserved by Walter.        
+          

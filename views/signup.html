@@ -3,43 +3,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="main css/bootstrap.min.css">
 </head>
 <body>
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">COVID Stores</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register">Register</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <form>
+  <!-- End of Nav bar -->
+
+
+  <!-- Main content -->
+  <!-- start of Main content -->
+  <div class="row">
+    <div class="col-md-8">
+      <h1 style="font-family: 'penna';">Covid<span style="color: rgb(133, 133, 235);">Stores.</span> </h1>
+      <p>All managers register here</p>
+    </div>
+
+    <div class="col-md-4">
+
+      <form method="POST" action="/signup">
+
+        
         <div class="form-row">
-
-
+  
+  
           <div class="container">
-              <h1>Covid Stores.</h1>
-              <h2>Sign Up</h2>
-
+             
+              <h2>Admin Register</h2>
+  
               <div class="row">
                   <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="First name">
+                    <input type="text" class="form-control" placeholder="First name" name="fname">
                   </div>
-
+  
                   <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Last name">
+                    <input type="text" class="form-control" placeholder="Last name" name="lname">
                     </div>
                 
           
                 
                  </div>
             
-
+  
             <br>
-
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+  
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" name="username" required>
             <h6>You can use letters, numbers & periods</h6>
             <br>
-
-            <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password.">
+  
+            <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Password." name="password" required>
             <small id="passwordHelpInline" class="text-muted">
             Must be 8-20 characters long.
             </small>
-
+  
             </br>
             <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="Confirm Password">
             <small id="passwordHelpInline" class="text-muted">
@@ -48,11 +94,23 @@
             
             <br>
             <br>
-            <button>Create Account.</button>
-        </div>
+            <button type="submit" value="register">Register.</button>
+
+            <br>
+            <br>
+            <a href="/login" style="color: purple;">Login</a>
+
+          </div>
          
         </div>
       </form>
+    
+    </div>
+  </div>
+ 
+
+  
+
     
 </body>
     <script src="js\bootstrap.min.js"></script>

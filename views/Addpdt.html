@@ -61,13 +61,12 @@
       <h1>Covid <span>Stores</span></h1>
 
 
-      <form action="/Addpdt" method="POST">
+      <form action="/Addpdt" method="POST" id="form" name="form" class="form-goup">
 
         <fieldset>
 
         
-
-          <h3>Add Product</h3>
+           <h3>Add Product</h3>
 
 
         
@@ -80,83 +79,91 @@
                 
             <div>
               <label for="productName">Product Name</label>
-              <input type="text" name="productName" class="productName">
+              <input type="text" name="productName" class="productName" id="productName">
+              <small id="msg"></small>
             </div>
 
             <div>
               <label for="make">Make</label>
-              <input type="text" name="make" class="make">
+              <input type="text" name="make" class="make" id="make">
+              <small id="msg"></small>
             </div>
                 
             <div>
               <label for="serialNo">Serial number</label>
-              <input type="text" name="serialNo" class="serialNo">
+              <input type="text" name="serialNo" class="serialNo" id="serialNo">
+              <small id="msg"></small>
             </div>
                   
             <div>
               <label for="initial_Pay">Initial Pay</label>
-              <input type="number" name='initial_pay' class="initial_pay">
+              <input type="number" name='initial_pay' class="initial_pay" id="initial_pay">
+              <small id="msg"></small>
             </div>
 
             <div>
               <label for="color">Color</label>
-              <input type="text" name="color" class="color">
+              <input type="text" name="color" class="color" id="color">
+              <small id="msg"></small>
             </div>
                 
-            <div>
+            
               <label for="description">Description</label>
               <textarea name="description" id="des"></textarea>
-            </div>
-                
-                                
-                
-                
+              <small id="msg"></small>
+              
+            
+               
+            
+            
 
-          
-            
-            
-            
-          <div class="add-form">
+                              
             <div>
               <label for="category">Category</label>
-              <input type="text" name="category" class="category">
+              <input type="text" name="category" class="category" id="category">
+              <small id="msg"></small>
             </div>
 
             <div>
               <label for="date">Date of entry</label>
-              <input type="date" name="date" class="date">
+              <input type="date" name="date" class="date" id="date">
+              <small id="msg"></small>
             </div>
 
             <div>
               <label for="price">Price</label>
-              <input type="number" name="price" class="price">
+              <input type="number" name="price" class="price" id="price">
+              <small id="msg"></small>
             </div>
 
             <div>
               <label for="pay_interval">Pay Interval</label>
-              <input type="number" name="pay_interval" class="pay_interval">
+              <input type="number" name="pay_interval" class="pay_interval" id="pay_interval">
+              <small id="msg"></small>
             </div>
 
             <div>
               <label for="stockNumber">Number in Stock</label>
-              <input type="number" name="stockNumber" class="stockNumber">
+              <input type="number" name="stockNumber" class="stockNumber" id="stockNumber">
+              <small id="msg"></small>
             </div>
 
             <div>
               <label for="image">Image</label>
               <input type="file" id="image" name="image">
+              <small id="msg"></small>
             </div>     
                 
           </div>
 
 
-          <button class="butn">
-            Save
+          <button class="butn" type="submit">
+            SUBMIT
           </button>
 
         
           
-      </fieldset>
+        </fieldset>
               
 
 
@@ -183,11 +190,12 @@
     <!-- End of footer -->
 
      <!-- Js Scripts -->
+     <script src="js/pdt.js"></script>
     <script src="js\bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    
 
 
 

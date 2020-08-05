@@ -6,7 +6,7 @@ html(lang="en")
         title Product list
         link(rel="stylesheet", href="/main css/bootstrap.min.css")
     body
-        h2(style="text-align: center;") Registered Agents.
+        h2(style="text-align: center;") Added Products.
         .container
             table.table
                 thead.thead-dark
@@ -30,25 +30,26 @@ html(lang="en")
 
                         tr
                             td #{product.productName}
-                            td #{product.make}
-                            td #{product.serialNo}
-                            td #{product.initial_pay}
-                            td #{product.color}
-                            td #{product.description}
                             td #{product.category}
+                            td #{product.make}
                             td #{product.date}
+                            td #{product.serialNo}
                             td #{product.price}
+                            td #{product.initial_pay}
                             td #{product.pay_interval}
+                            td #{product.color}
                             td #{product.stockNumber}
-                            td #{product.image}
+                            td #{product.description}                                                                                                   
+                            td 
+                                img(src=product.image, alt="no image", srcset="")
                             td
                             td
+                                form(method="post" action='/Addpdt/delete')
+                                    input(type="hidden", placeholder="", name="id", value=product._id)
+                                    button.btn.btn-dark.btn-block(type="submit") Delete 
 
-                                //- form(method="post" action='/Addpdt/delete')
-                                //-     input(type="hidden", placeholder="", name="id", value=agent._id)
-                                //-     button.btn.btn-dark.btn-block(type="submit") Delete 
 
     button.btn.btn-primary#add
-        a(href="/Addpdt", style="color: white") Add New Sales Agents
+        a(href="/Addpdt", style="color: white") Add New Product.
     br
     footer(#footer,style="color: white; background-color: rgb(6,6,22); text-align: center;" class="fixed-bottom") Copyright © 2020 All rights reserved by Walter.

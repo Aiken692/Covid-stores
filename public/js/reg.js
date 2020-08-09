@@ -14,15 +14,18 @@ form_sale.addEventListener('submit', (e) => {
     // Retrieving the values of form elements.
     var fname = document.sale.fname.value;
     var lname = document.sale.lname.value;
+    var user = document.sale.username.value;
     var email = document.sale.email.value;
-    var username = document.sale.username.value;
     var password = document.sale.password.value;
-    var phone = document.sale.phoneNumber.value;
+    var nin = document.sale.nationalid.value;
+    
+
+    
 
     // Defining error variables with a default value.
-    var nameErr = lnameErr = emailErr = passErr= phoneErr = true;
+    var nameErr = lnameErr = userErr = emailErr = passErr = ninErr = true;
     
-    // Validate fof first name.
+    // Validate for first name.
     if(fname == "") {
         printError("nameErr", "Please enter your name");
     } else {
@@ -51,17 +54,11 @@ form_sale.addEventListener('submit', (e) => {
 
 
     // Validating username.
-    if (username == "") {
+    if (user == "") {
          printError("userErr", "Please enter your username")
     } else {
-        var regex = /^[a-zA-Z\s]+$/;
-        if (regex.test(username) === false){
-            printError("username", "Please enter your username")
-        } else {
-            printError("username", "");
+            printError("userErr", "");
             userErr = false;
-        }
-        
     }
 
 
@@ -81,40 +78,50 @@ form_sale.addEventListener('submit', (e) => {
         }
     }
 
-    // Validating the password.
+    //Validating the password.
     if (password == "") {
         printError("passErr", "Please enter your password")
     } else {
-        var regex = /^[a-zA-Z0-9\s]+$/;
-        if(regex.test(password) === false) {
-            printError("passErr", "Plese enter the password");
-        } else {
             printError("passErr", "");
             passErr = false;
+    }
+
+    // Validating the National ID.
+    if (nin == "") {
+        printError("ninErr", "Please Enter the Nin ID")
+    } else {
+        var regex = /^[A-Z]{3}[0-9]{1,8}[A-Z]*$/;
+        if (regex.test(nin) === false){
+            printError("ninErr", "Enter a valid nin Id")
+        } else {
+            printError("ninErr", "");
+            ninErr = false;
         }
     }
 
-    // Validating the phone number.
-    if (phone == "") {
-        printError("phoneErr", "Phone no. is required");
-    } else {
-        var regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-        if(regex.test(phone) === false) {
-            printError("phoneErr", "Phone should be numbers");
-        } else {
-            printError("phoneErr", "");
-            passErr = false;
-        }
-    }
+  //  Validating the phone number.
+    // if (phone == "") {
+    //     printError("phoneErr", "Phone no. is required");
+    // } else {
+    //     var regex = /^\d{10}$/;
+    //     if(regex.test(phone) === false) {
+    //         printError("phoneErr", "Phone should be numbers");
+    //     } else {
+    //         printError("phoneErr", "");
+    //         phoneErr = false;
+    //     }
+    // }
     
 
 
 
     // Prevent the form from being submitted if there are any errors.
-    if ((nameErr || lnameErr || emailErr || userErr || passErr || phoneErr) == true) {
+    if ((nameErr || lnameErr || userErr || emailErr || passErr || ninErr) == true) {
         e.preventDefault();
+        // alert("something failed")
     } else {
         e.currentTarget.submit();
+        // alert("Successful")
     }
 
 });

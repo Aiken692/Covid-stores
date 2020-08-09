@@ -6,7 +6,6 @@ const Registration = require('../models/Registration')
 
 const path = require('path');
 
-const isAuthenticate = require('../authentication')
 
 // Get display a register page.
 router.get('/', (req, res) => {
@@ -15,8 +14,9 @@ router.get('/', (req, res) => {
 
 
 router.post('/', async (req, res) => {
-    // if(req.session.user){
+    if(req.session.user){
         try {
+            console.log(req.body)
             const items = new Registration(req.body);
             await Registration.register(items, req.body.password, (err) => {
                 if (err) {
@@ -29,8 +29,9 @@ router.post('/', async (req, res) => {
             console.log(err)
         }
 
-    // }
+    }
 })
+
 
 // router.post('/', async (req, res) => {
 //     const registration = new Registration(req.body);
@@ -88,6 +89,9 @@ router.get('/agent', async (req, res) => {
     }
    
 });
+
+
+
 
 
 

@@ -4,10 +4,12 @@ const passport = require('passport');
 
 //Authentication
 module.exports = function isAuthenticate(req, res, next){
-    if(req.isAuthenticated()){
+    if(req.isAuthenticated() && req.user.role == 'Admin'){
         return next();
 
-    } else {
+    } else if(req.isAuthenticated() && req.user.role == 'Agent') {
+        res.redirect('/login')
+    }else{
         res.redirect('/login')
     }
 }

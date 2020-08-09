@@ -3,8 +3,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="main css/home.css">
-    <link rel="stylesheet" href="main css/bootstrap.min.css">
+    <link rel="stylesheet" href="/main css/home.css">
+    <link rel="stylesheet" href="/main css/bootstrap.min.css">
+
+    <style>
+      .card .card-title {
+        visibility: hidden;
+        transition: all .5s linear;
+      }
+
+      .card:hover .card-title{
+        visibility: visible;
+        color: blue;
+      }
+    </style>
+    
 </head>
 <body>
     <!-- Nav bar -->
@@ -14,17 +27,27 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" style="margin-left: auto;">
           <li class="nav-item active">
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/signin">Admin Login</a>
+              <a class="dropdown-item" href="/login">Agent Login</a>
+              
+            </div>
+          </li>
           
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="login">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
-          </li>
+          </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
               Our Products
@@ -34,6 +57,7 @@
               <a class="dropdown-item" href="#food">Food Stuff</a>
               <a class="dropdown-item" href="#fittness">Fittness Kits</a>
               <a class="dropdown-item" href="#tv">Television Sets</a>
+              <a class="dropdown-item" href="#bags">Bags</a>
               <a class="dropdown-item" href="#gaming">Gaming</a>
             </div>
           </li>
@@ -43,6 +67,9 @@
     <br>
 
     <!-- Main content -->
+
+
+    <!-- Start of the carousel -->
     <div class="main">
       <div class="container">
         <div class="row">
@@ -68,19 +95,17 @@
         </div>
       </div>
     </div>
-
+    <!-- End of the carousel  -->
 
 
     <!-- Display Products -->
     <div class="ourproducts">
       <h3>Our products</h3>
-      
-      
-    </div>
+      </div>
     
 
     <!-- starting point of products -->
-     
+     <!-- Furniture Section -->
     <div class="card-header">
       <h4 id="furniture" >Furniture</h4>
     </div>
@@ -125,7 +150,7 @@
     </div>
   
 
-
+    <!-- Food Section -->
     <h1 id="food">Food Stuff</h1>
 
     <div class="row row-cols-1 row-cols-md-2">
@@ -159,6 +184,7 @@
      
     </div>
 
+    <!-- Fittness Section -->
     <h3 id="fittness">Fittness Kits</h3>
 
     <div class="row row-cols-1 row-cols-md-2">
@@ -183,7 +209,49 @@
       
     </div>
 
+    <!-- Bag Section -->
+    <h3 id="bags">Bags</h3>
 
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          <img src="img/bag1.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+          
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          <img src="img/bag2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          <img src="img/bag3.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="card h-100">
+          <img src="img/bag4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Television Section -->
     <div class="card-header" style="background-color: lightgrey;">
       <h4 id="tv">Television Sets</h4>
     </div>
@@ -328,6 +396,7 @@
     </div>
 
       <!-- JS here -->
+      <script src="/js/bootstrap.min.js"></script>
       <script src="js/jquery-3.4.1.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

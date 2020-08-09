@@ -38,7 +38,7 @@ router.post('/customer', async (req,res) => {
         const myData = new Customer(req.body);
         await myData.save()
             .then(item => {
-                res.redirect('/customerlist')
+                res.redirect('login/list')
             })
     } catch (error) {
         res.status(400).send("unable to save to database");
@@ -46,23 +46,20 @@ router.post('/customer', async (req,res) => {
 });
 
 
-
-
-
-
-// getting the Admin panel
-router.get('/adminpanel', (req, res) => {
-    if(req.session.user){
-        res.sendFile(path.join(__dirname, '../views', 'Adminpanel.html'))
+/*Creating a get route which picks data from the database of the registered customers and displays them using the 
+customerlist.pug file othrwise an error message unable to find in the data base
+would be displayed on the browser.*/
+ router.get('/list', async (req, res) => {
+    try {
+        let items = await Customer.find();
+        res.render('customerlist', {customers: items})
+    } catch (err) {
+        res.status(400).send('unable to find items in the database');
     }
-});
+   
+}); 
 
 
-// //Logout
-// router.get('/logout', (req, res)=>{
-//     req.logout();
-//     res.redirect('/login');
-// });
 
 
 //logout

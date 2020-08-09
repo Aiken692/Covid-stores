@@ -10,9 +10,12 @@ const mongoose  = require('mongoose');
 const User = require('./models/Signup');
 // calling the registration model.
 const Register = require('./models/Registration');
+require('./models/Customer');
+
 // declaring Routes in the server
 const homeRoutes = require('./routes/homeRoute');
 const signupRoutes = require('./routes/signupRoutes');
+const signinRoutes = require('./routes/signinRoutes')
 const loginRoutes = require('./routes/loginRoutes');
 const registerRoutes = require('./routes/registerRoutes');
 const AddpdtRoutes = require('./routes/AddpdtRoute');
@@ -64,7 +67,7 @@ app.use(passport.session());
 
 
 // Passport configs for the User.
-passport.use(User.createStrategy());
+passport.use('user-local',User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
@@ -85,6 +88,7 @@ app.get('*',  (req, res, next) => {
 // Instations for routes.
 app.use('/', homeRoutes);
 app.use('/signup', signupRoutes);
+app.use('/signin', signinRoutes);
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/Addpdt', AddpdtRoutes);

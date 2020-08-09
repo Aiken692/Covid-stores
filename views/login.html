@@ -37,6 +37,7 @@
         </ul>
       </div>
     </nav>
+    <!-- End of Nav bar -->
 
     <!-- Main content -->
     <div class="container">
@@ -85,15 +86,15 @@
           <h3>Welcome Back!</h3>
           <h3>Please Sign in now</h3>
 
-          <form action="/login" method="POST">
+          <form action="/login" method="POST" name="login" id="login">
             <div class="form-group">
               
-              <input type="text" class="username" id="username"  placeholder="User name" name="username">
+              <input type="text" class="username" id="username"  placeholder="User name" name="username" required>
               <small id="emailHelp" class="form-text text-muted">Wash your hands and keep safe.</small>
             </div>
             <div class="form-group">
               
-              <input type="password" class="password" id="password" placeholder="Password" name="password">
+              <input type="password" class="password" id="password" placeholder="Password" name="password" required>
             </div>
             <div class="form-group form-check">
               <input type="checkbox" class="remember_me" id="remember_me">
@@ -104,8 +105,7 @@
             <br>
             
             <!-- links to the sign up form for the manager -->
-            <a href="/signup" style="color: purple;">Register</a>
-
+            
           </form>
 
         </div>

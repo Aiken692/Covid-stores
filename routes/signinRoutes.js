@@ -13,8 +13,8 @@ router.get('/', (req, res) => {
      
   router.post('/', passport.authenticate('user-local'), (req, res) => {
     req.session.user = req.user;
-    console.log(req.body);
-    console.log(req.user)
+    // console.log(req.body);
+    // console.log(req.user)
     res.redirect('/signin/adminpanel');
   });
 

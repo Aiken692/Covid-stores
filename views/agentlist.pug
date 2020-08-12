@@ -4,7 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Registered Agents
-        link(rel="stylesheet", href="/main css/agentlist")
+        link(rel="stylesheet", href="/main css/agentlist.css")
         link(rel="stylesheet", href="/main css/bootstrap.min.css")
     body
         h2(style="text-align: center;") Registered Agents.
@@ -34,7 +34,11 @@ html(lang="en")
                             td #{agent.lname}
                             td #{agent.username}
                             td #{agent.email}
-                            td #{agent.birthday}
+                            -var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                            -var month = monthNames[agent.birthday.getMonth()];
+                            -var day = agent.birthday.getDate()
+                            -var year = agent.birthday.getFullYear()
+                            td #{day}-#{month}-#{year}
                             td #{agent.gender}
                             td #{agent.nationalid}
                             td #{agent.phoneNumber}

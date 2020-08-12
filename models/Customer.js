@@ -9,8 +9,8 @@ const customerSchema = new mongoose.Schema({
     gender: String,
     itemName: String,
     serialNumber: Number,
-    date: Date,
-    date: Date,
+    dateP: Date,
+    dateN: Date,
     amountPayable: Number,
     refereeNumber: Number,
     purchaseReceipt: Number

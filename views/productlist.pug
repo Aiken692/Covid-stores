@@ -4,8 +4,9 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Product list
+        link(rel="stylesheet", href="/main css/agentlist.css")
         link(rel="stylesheet", href="/main css/bootstrap.min.css")
-    body
+    body(style="background-color-grey")
         h2(style="text-align: center;") Added Products.
         .container
             table.table
@@ -23,6 +24,8 @@ html(lang="en")
                         th Number in Stock
                         th Description
                         th Image 
+                        th
+                        th
                 tbody
 
                     each product in products
@@ -41,7 +44,7 @@ html(lang="en")
                             td #{product.stockNumber}
                             td #{product.description}                                                                                                   
                             td 
-                                img(src=product.image, alt="no image", srcset="")
+                                img(src="../"+product.image, width="100px" height="100px" alt="", srcset="")
                             td
                             td
                                 form(method="post" action='/Addpdt/delete')

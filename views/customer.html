@@ -47,7 +47,7 @@
   <!-- Main content -->
 
   <div class="container">
-    <form action="/customer" method="POST" name="cust" id="customer">
+    <form action="/login/customer" method="POST" name="cust" id="customer">
       <h2>Customer Purchase Details</h2>
       <div class="form-group">
           <div class="row">
@@ -75,7 +75,7 @@
           </div>
           <div class="row">
               <label for="initialPay">Initial Pay</label><br>
-              <input type="number" name="initialPay" class="initialPay">
+              <input type="number" name="initialPay" class="initialPay" min="100">
           </div>
           <div class="row">
               <label for="nantionalid">National ID</label><br>
@@ -104,24 +104,24 @@
 
           <div class="row">
               <label for="serialNumber">Item serial number</label><br>
-              <input type="number" name="serialNumber" class="serialNUmber">
+              <input type="number" name="serialNumber" class="serialNUmber" min="100">
               <div class="error" id="serialErr"></div>
           </div>
           <div class="row">
               <label for="dateOfPay"> Date of Pay</label><br>
-              <input type="date" name="date" class="date">
+              <input type="date" name="dateP" class="date">
           </div>
           <div class="row">
               <label for="nextDateOfPayment">Next date of payment</label><br>
-              <input type="date" name="date" class="date">
+              <input type="date" name="dateN" class="date">
           </div>
           <div class="row">
               <label for="amountPayble">Amount next Payable</label><br>
-              <input type="number" name="amountPayable" class="amountPayable">
+              <input type="number" name="amountPayable" class="amountPayable" min="100">
           </div>
           <div class="row">
               <label for="refereeNumber">Refree number</label><br>
-              <input type="text" name="refereeNumber" class="refereeNumber">
+              <input type="text" name="refereeNumber" class="refereeNumber" min="100">
           </div>
           <div class="row">
               <label for="purchaseReceipt">Purchase Receipt</label><br>

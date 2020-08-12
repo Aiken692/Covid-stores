@@ -50,7 +50,7 @@ input {
     margin-bottom: 5px;
 }
 
-#msg {
+.error {
     color: red;
 }
 /* .form-control {

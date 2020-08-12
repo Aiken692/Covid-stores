@@ -28,28 +28,17 @@
               <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login">Login</a>
+              <a class="nav-link" href="Adminpanel" style="color: white;">Admin Panel</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="register">Register</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown link
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
+            </li> -->
+            
           </ul>
         </div>
       </nav>
 
-    <!-- <div class="card-header">
-      <h1>Covid Store</h1>
-    </div> -->
+    
 
 
     <!-- Main -->
@@ -61,12 +50,13 @@
       <h1>Covid <span>Stores</span></h1>
 
 
-      <form action="/Addpdt" method="POST" id="form" name="form" class="form-goup">
+      <form action="/Addpdt" method="POST" id="form" name="form" class="form-goup" enctype="multipart/form-data">
 
         <fieldset>
 
         
            <h3>Add Product</h3>
+           <hr>
 
 
         
@@ -80,13 +70,13 @@
             <div>
               <label for="productName">Product Name</label>
               <input type="text" name="productName" class="productName" id="productName">
-              <small id="msg"></small>
+              <div class="error" id="nameErr"></div>
             </div>
 
             <div>
               <label for="make">Make</label>
               <input type="text" name="make" class="make" id="make">
-              <small id="msg"></small>
+              <div class="error" id="makeErr"></div>
             </div>
                 
             <div>

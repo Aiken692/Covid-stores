@@ -46,4 +46,22 @@ main{
     background-color: lightgrey;
 }
 
+.card .card-title {
+    visibility: hidden;
+    transition: all .5s linear;
+    ;
+  }
+
+  .card:hover .card-title{
+    visibility: visible;
+    color: rgb(6, 6, 22);
+  }
+
+  .card:hover {
+      background: lightgrey;
+      /* box-shadow: rgb(61, 4, 4); */
+      box-shadow: 5px 5px 5px 5px rgb(63, 60, 60);
+      transition: 0.5s;
+  }
+
 

@@ -1,9 +1,13 @@
 body {
-    background-color: rgb(121, 118, 118);
+    background-color: beige;
 }
 
 a {
     color: white;
+}
+
+.container{
+    background-color: lightgrey;
 }
 
 

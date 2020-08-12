@@ -34,14 +34,15 @@ router.get('/customer', (req, res) => {
 and saves it to the database the redirects the user to the customerlist(a route which displays the 
 list.pug file)*/
 router.post('/customer', async (req,res) => {
+    
     try {
-        const myData = new Customer(req.body);
-        await myData.save()
-            .then(item => {
-                res.redirect('login/list')
-            })
-    } catch (error) {
-        res.status(400).send("unable to save to database");
+        console.log(req.body)
+        const items = new Customer(req.body);
+        await items.save()
+        res.redirect('/login/list')
+    } catch (err) {
+        res.send('Sorry! Something went wrong');
+        console.log(err)
     }
 });
 
@@ -76,8 +77,15 @@ router.get('/logout', (req, res) => {
   })
 
 
-
-
+  // For the delete.
+router.post("/delete", async (req, res) => {
+    try {
+      await Customer.deleteOne({_id: req.body.id })
+      res.redirect('back')
+    } catch (error) {
+       res.status(400).send("unable to delete to database");
+    }
+  })
 
 
 module.exports = router;

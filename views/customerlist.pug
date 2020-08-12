@@ -4,7 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Registered Customers
-        link(rel="stylesheet", href="/main css/agentlist")
+        link(rel="stylesheet", href="/main css/agentlist.css")
         link(rel="stylesheet", href="/main css/bootstrap.min.css")
     body
         h2(style="text-align: center;") Registered Customers.
@@ -16,7 +16,7 @@ html(lang="en")
                 thead.thead-dark
                     tr
                         th Full name
-                        th Location
+                        //- th Location
                         th Phone Number
                         th Email
                         th Initial Pay
@@ -24,11 +24,11 @@ html(lang="en")
                         th Gender 
                         th Item Name
                         th Serial Number
-                        //- th Date 
-                        th Date
-                        //- th Amount Payable
-                        //- th Referee No
+                        th Date of Next Payment
+                        th Amount Payable
+                        th Referee No
                         th Purchase Receipt
+                        th
                         
                 tbody
 
@@ -36,15 +36,19 @@ html(lang="en")
 
                         tr
                             td #{customer.fullname}
-                            td #{customer.location}
+                            //- td #{customer.location}
                             td #{customer.phoneNumber}
                             td #{customer.email}
                             td #{customer.initialPay}
                             td #{customer.nationalid}
                             td #{customer.gender}
                             td #{customer.itemName}
-                            td #{customer.date}
-                            td #{customer.date}
+                            td #{customer.serialNumber}
+                            -var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                            -var month = monthNames[customer.dateN.getMonth()];
+                            -var day = customer.dateN.getDate()
+                            -var year = customer.dateN.getFullYear()
+                            td #{day}-#{month}-#{year}
                             td #{customer.amountPayable}
                             td #{customer.refereeNumber}
                             td #{customer.purchaseReceipt}

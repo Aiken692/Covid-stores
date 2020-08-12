@@ -94,8 +94,13 @@ form_sale.addEventListener('submit', (e) => {
         if (regex.test(nin) === false){
             printError("ninErr", "Enter a valid nin Id")
         } else {
-            printError("ninErr", "");
-            ninErr = false;
+            if (nin.value.length === 13){
+                printError("ninErr", "nin must be 13 characters");              
+            } else {
+                printError("ninErr", "");
+                ninErr = false;
+            }
+            
         }
     }
 

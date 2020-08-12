@@ -51,6 +51,7 @@ app.set('views', './views')
 // Insta......
 app.use(express.static('public'));
 app.use("Addpdt/img",express.static('public'));
+app.use(express.static('uploads'));
 // body-parser middleware.
 app.use(bodyParser.urlencoded({extended: true}));
 

@@ -3,55 +3,36 @@ const router = express.Router();
 const Product = require('../models/Product')
 const path = require('path');
 const multer = require('multer');
-const {extname} = require('path');
 
 
-//Specify storage.
+
+// //Specify storage.
 const storage = multer.diskStorage({
-    destination: './public/img',
-    filename: function(req, file, callback){
-        callback(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    destination: function(req,file, cb){
+        cb(null, 'uploads/')
+    },
+    filename:function(req, file, cb){
+        cb(null, file.originalname)
     }
+
 })
-
-
-
 // Init upload
-const upload = multer({
-    storage: storage,
-    limit: {fileSize: 900000},
-    filefilter:(req, file, callback) => {
-        checkFileType(file, callback);
-    }
-})
-
-// Check file type
-function checkFileType(file, callback){
-    // allowed extensions
-    const filetypes = /jpeg|jpg|png/;
-    // check extension
-    const extname = filetypes.test(path.extname(file.originalname));
+const upload =  multer({storage: storage})
+// Giving the models variables names to use
 
 
-    // Check mimetype
-    const mimetype = filetypes.test(file.mimetype);
-    if (mimetype && extname){
-        return callback(null, true);
-    } else {
-        callback('Error: images only');
-    }
-}
+
 
 
 // Get display a product page.
-router.get('/', (req, res) => {
+router.get('/', ensureAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, '../views', 'Addpdt.html'))
 });
 
-router.post('/', upload.single('image'),async (req, res) => {
+router.post('/', upload.single('image'), async (req, res) => {
     console.log(req.file)
 
-    const product = new Product(req.body);
+    const product = new Product();
     product.productName  = req.body.productName;
     product.make = req.body.make;
     product.serialNo = req.body.serialNo;
@@ -63,7 +44,7 @@ router.post('/', upload.single('image'),async (req, res) => {
     product.price = req.body.price;
     product.pay_interval = req.body.pay_interval
     product.stockNumber = req.body.stockNumber;
-    product.image = req.file.path;
+    product.image = req.file.originalname;
 
     try {
         await product.save()
@@ -81,7 +62,7 @@ router.post('/', upload.single('image'),async (req, res) => {
 agentlist.pug file othrwise an error message unable to find in the data base
 would be displayed on the browser.*/
 
-router.get('/product', async (req, res) => {
+router.get('/product', ensureAuthenticated, async (req, res) => {
     try {
         const walls = await Product.find();
         res.render('productlist', {products: walls})
@@ -89,6 +70,15 @@ router.get('/product', async (req, res) => {
         res.status(400).send('unable to find items in the database')
     }
 });
+
+
+function ensureAuthenticated(req, res, next){
+    if (req.isAuthenticated()){
+        return next();
+    } else {
+        res.redirect('/signin/adminpanel')
+    }
+}
 
 router.post("/delete", async (req, res) => {
     try {
